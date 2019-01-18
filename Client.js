@@ -95,18 +95,19 @@ function getmyport (data){
 // var PORT = '8200';
 var PORT=data.Port
 var HOST=data.Host
-
+console.log('1');
 var client = new net.Socket();
 client.connect(PORT, HOST, function() {
-
+console.log('2');
 console.log('CONNECTED TO: ' + HOST + ':' + PORT);
 client.write(encryptedText);
-
+console.log('3');
 client.on('data', function (data) {
  // var buf = Buffer.from(data,'base64').toString('ascii');
  // console.log(data);
   // console.log(typeof(data));
   // console.log("Enter to string", data);
+  console.log('4');
    console.log("buff",data.toString('utf8'));
   //var dd = data.toString('utf8');
    decryptedText1 = decrypt(data.toString('utf8'), securityKey);
