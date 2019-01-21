@@ -168,7 +168,7 @@ getmyport(data)
 var port = process.env.PORT || 3002;
  
 http.listen(port, function(){
-   console.log('listening in http://localhost:' + port);
+   console.log('listening to http://localhost:' + port);
 });
 // http.createServer(function (req, res) {
 //   res.writeHead(200, {'Content-Type': 'text/html'});
