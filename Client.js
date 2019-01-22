@@ -144,6 +144,13 @@ client.on('error', function() {
   }
   return try_other_port();
 });
+client.on('unauthorized', (reason) => {
+    console.log('Unauthorized:', reason);
+
+    error = reason.message;
+
+    client.disconnect();
+  });
 }
 
 io.on('connection', (socket) => {
