@@ -95,7 +95,7 @@ function getmyport (data){
 // var PORT = '8200';
 var PORT=data.Port
 var HOST=data.Host
-console.log('1');
+console.log('12');
 var client = new net.Socket();
 client.connect(PORT, HOST, function() {
 console.log('2');
@@ -175,7 +175,7 @@ getmyport(data)
 var port = process.env.PORT || 3002;
  
 http.listen(port, function(){
-   console.log('listening to http://localhost:' + port);
+   console.log('listening 12:' + port);
 });
 // http.createServer(function (req, res) {
 //   res.writeHead(200, {'Content-Type': 'text/html'});
